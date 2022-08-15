@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ 
+ <hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    <property name="hibernate.connection.url">jdbc:sqlserver://localhost;databaseName=HibernateAssignment;instanceName=SQLEXPRESS2019</property>
+    <property name="hibernate.connection.username">sa</property>
+    <property name="hibernate.connection.password">password_123</property>
+    <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+    <property name="hbm2ddl.auto">update</property>
+    <property name="show_sql">false</property>
+
+    <!-- Mapping files -->
+    <mapping class="com.citiustech.hibernate1.model.Movie"/>
+
+  </session-factory>
+</hibernate-configuration>
